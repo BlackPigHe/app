@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao
+END
+UtilDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/UtilDao.java
+END
+DeptDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/DeptDao.java
+END
+sql.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/sql.properties
+END
+GoodsDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/GoodsDao.java
+END
+UserDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/UserDao.java
+END
+CompanyDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/CompanyDao.java
+END
+OrderDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wdd/!svn/ver/15/LogisticsManageSystem/src/com/logistics/Dao/OrderDao.java
+END
+CompDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/CompDao.java
+END
+FunDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/FunDao.java
+END
+QualityDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/QualityDao.java
+END
+BaseDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/BaseDao.java
+END

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;R.java&apos; to &apos;hello/gen/com.example.hello&apos;&#x0D;&#x0A;－ 原始项目：“appcompat_v7”&#x0D;&#x0A;－ 目标元素：“hello/gen/com.example.hello”&#x0D;&#x0A;－ 原始元素：“android.support.v7.appcompat.R.java”" description="复制编译单元" destination="=hello/gen&lt;com.example.hello" element1="/gen&lt;android.support.v7.appcompat{R.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1467888984565" units="1" version="1.0"/>
+</session>

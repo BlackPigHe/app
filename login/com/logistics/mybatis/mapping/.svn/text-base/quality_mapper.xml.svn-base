@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="Qual">
+	<insert id="insert_quality" parameterType="Quality">
+		INSERT INTO quality(orderno,theme,quadesc,complainidfk) VALUE(
+		#{orderno},#{theme},#{quadesc},#{complainidfk})
+	</insert>
+	
+	
+	
+	
+	
+  </mapper>
+  

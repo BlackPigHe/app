@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.1.xsd
+        http://www.springframework.org/schema/mvc  
+        http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd"
+>
+	<mvc:annotation-driven />
+	<!-- 开启注解方式 -->
+	<context:component-scan base-package="com.logistics.springMVC.controller" />
+	<aop:aspectj-autoproxy />  <!-- 要添加本行 -->
+	<!-- <context:component-scan base-package="com.logistics.Dao.DaoIm" /> <context:component-scan 
+		base-package="com.logistics.serve.serveIm" /> <context:component-scan base-package="com.logistics.util" 
+		/> -->
+	<!-- 扫描路径 -->
+	<!-- 释放静态资源 -->
+	<mvc:resources
+		mapping="/images/**"
+		location="/images/" />
+	<mvc:resources
+		mapping="/js/**"
+		location="/js/" />
+	<!--这样写是释放js目录下的所有资源 -->
+</beans>

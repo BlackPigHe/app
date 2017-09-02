@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="User">
+  
+    <resultMap type="User" id="user_dept_company" autoMapping="true">
+  	<id property="userid" column="userid"/>
+  		<association property="dept" javaType="Dept" autoMapping="true">
+  			<id property="deptid" column="deptid"/>
+  		</association>
+  		<association property="company" javaType="Company" autoMapping="true">
+  			<id property="comid" column="comid"/>
+  		</association>
+  </resultMap>
+  
+  
+  <!-- 根据用户账号查询账户 -->
+  <select id="select_user" parameterType="User" resultType="User">
+  		SELECT account FROM USER WHERE account=#{account}
+  </select>
+  
+  <!-- 根据登录账号，密码判断是否正确-->
+  <select id="select_login" parameterType="User" resultType="String">
+  		SELECT pwd FROM USER WHERE account=#{account}
+  </select>
+  
+  <!-- 查询用户所有的信息 -->
+  <select id="select_all" parameterType="User" resultMap="user_dept_company">
+  		SELECT u.*,d.deptid,deptname,d.deptno,c.* FROM USER AS u,dept AS d, company AS c WHERE u.`companyno`= c.`companyno` AND 
+        u.`deptno`= d.`deptno` AND account=#{account} and pwd=#{pwd}
+  </select>
+
+  <!-- 更新密码 -->
+  <update id="update_pwd" parameterType="User">
+  	update user set pwd=#{pwd} where userid=#{userid}
+  </update>
+  
+  
+  
+
+  
+  
+  
+  
+<!--  管理用户  -->
+  <select id="userpage" parameterType="Page" resultType="User">
+       SELECT  uname,account,sex,age,u.tel,deptname,comname FROM   USER AS u  
+	   LEFT JOIN dept  AS d ON u.`deptno`=d.`deptno`
+	   LEFT JOIN company AS c ON u.`companyno`=c.`companyno`
+        <where>
+          	<if test="params.userid!=0">userid=${params.userid}</if>
+        </where>
+       ORDER BY  userid
+  </select>
+  <insert  id="saveuser" parameterType="User">
+            
+ </insert> 
+
+
+  </mapper>

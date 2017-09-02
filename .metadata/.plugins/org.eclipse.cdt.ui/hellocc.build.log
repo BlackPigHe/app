@@ -1,0 +1,10 @@
+11:45:34 **** Incremental Build of configuration Release for project hellocc ****
+python D:/cocosExample/hellocc/proj.android/build_native.py -b release all 
+Android NDK: WARNING: APP_PLATFORM android-21 is larger than android:minSdkVersion 9 in ./AndroidManifest.xml    
+make.exe: Entering directory `D:/cocosExample/hellocc/proj.android'
+[armeabi] Install        : libMyGame.so => libs/armeabi/libMyGame.so
+make.exe: Leaving directory `D:/cocosExample/hellocc/proj.android'
+The Selected NDK toolchain version was 4.8 !
+
+11:45:44 Build Finished (took 9s.965ms)
+

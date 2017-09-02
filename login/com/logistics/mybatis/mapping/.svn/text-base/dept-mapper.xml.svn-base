@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="Dept">
+       <select id="select-page" parameterType="Page" resultType="Dept">
+  	       SELECT COUNT(*) AS empcount,d.* FROM USER AS u INNER JOIN dept AS d ON u.deptno=d.deptno  
+  	       	<where>
+  	       		<if test="params.companyno!=0">and companyno=#{params.companyno}</if>
+              	<if test="params.deptname!=null"> and deptname like count('%',#{params.deptname},'%')</if>
+            </where>
+  	         order by deptno 	                             
+       </select>
+      <select id="select_count" parameterType="User" resultType="int">
+		select count(*) from dept WHERE companyno=#{companyno}
+	</select>
+	
+	<insert id="insertDept" parameterType="Dept">
+	     INSERT  INTO  dept(`deptname`,`deptdesc`,`companyno`,`deptno`) 
+	     VALUES(#{deptname},#{deptdesc},#{companyno},#{deptno})
+	
+	</insert>
+	
+  </mapper>

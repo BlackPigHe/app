@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.enhance.gameservice&apos; to &apos;hellocc/src&apos;&#x0D;&#x0A;- Original project: &apos;libcocos2dx&apos;&#x0D;&#x0A;- Destination element: &apos;hellocc/src&apos;&#x0D;&#x0A;- Original element: &apos;libcocos2dx/src/com.enhance.gameservice&apos;" description="Copy package" destination="=hellocc/src" element1="/src&lt;com.enhance.gameservice" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1480734051676" version="1.0"/>
+</session>

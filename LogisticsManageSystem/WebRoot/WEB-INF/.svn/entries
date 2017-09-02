@@ -1,0 +1,74 @@
+10
+
+dir
+2
+https://pc-201512061948/svn/wdd/LogisticsManageSystem/WebRoot/WEB-INF
+https://pc-201512061948/svn/wdd
+
+
+
+2016-07-12T08:32:05.521226Z
+2
+wdd
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+851512db-9721-6d42-a986-399f684bc984
+
+classes
+dir
+
+lib
+dir
+
+spring
+dir
+
+springMVC
+dir
+
+web.xml
+file
+
+
+
+
+2016-07-12T08:29:40.897000Z
+aee18e3148301c3b2b8b71055ebb534d
+2016-07-12T08:32:05.521226Z
+2
+wdd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1587
+

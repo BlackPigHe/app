@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;hehe.xml&apos; to &apos;assets&apos;&#x0D;&#x0A;－ 原始项目：“xml的解析”&#x0D;&#x0A;－ 目标元素：“assets”&#x0D;&#x0A;－ 原始元素：“hehe.xml”" description="复制文件" element1="res/layout/hehe.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1470365130695" target="/xml的解析/assets" units="0" version="1.0"/>
+</session>

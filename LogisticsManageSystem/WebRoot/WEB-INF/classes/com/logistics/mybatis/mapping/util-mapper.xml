@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="roleFun">
+	<select id="getFun" parameterType="int" resultType="Function" >
+		SELECT function.* FROM rolefun INNER JOIN FUNCTION ON funidfk = funid WHERE roleidfk=#{i}
+	</select>
+	<select id="getRole" parameterType="int" resultType="Role" >
+		SELECT role.* FROM userrole INNER JOIN role ON userrole.roleidfk= role.roleid WHERE userrole.useridfk=#{i}
+	</select>
+	
+	<select id="fromCompanyIdGetRole" parameterType="int" resultType="Role" >
+		SELECT * FROM  role WHERE companyno=#{i}
+	</select>
+	
+</mapper>
+  
+  

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/WebRoot/WEB-INF/lib
+END
+mysql-connector-java-5.1.26-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/WebRoot/WEB-INF/lib/mysql-connector-java-5.1.26-bin.jar
+END
+junit-4.10.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/WebRoot/WEB-INF/lib/junit-4.10.jar
+END
+mybatis-3.3.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/WebRoot/WEB-INF/lib/mybatis-3.3.0.jar
+END
+quartz-all-2.1.7.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/WebRoot/WEB-INF/lib/quartz-all-2.1.7.jar
+END
+slf4j-api-1.7.12.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/WebRoot/WEB-INF/lib/slf4j-api-1.7.12.jar
+END
+log4j-1.2.17.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/WebRoot/WEB-INF/lib/log4j-1.2.17.jar
+END

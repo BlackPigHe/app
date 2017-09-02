@@ -1,0 +1,109 @@
+package com.logistics.springMVC.controller;
+
+import java.util.HashMap;
+
+import java.util.Map;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.logistics.pojo.Company;
+import com.logistics.serve.CompanyServe;
+import com.logistics.util.Page;
+
+@Controller
+@RequestMapping(value = "/Company")
+public class CompanyServlect {
+
+	@Resource(name = "CompanyServe")
+	public CompanyServe companyserve;
+
+	@RequestMapping(value = "/compList", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public Map<String, Object> compList(Company comp, int page, int rows) {
+      
+		comp = comp != null ? comp : new Company();
+		Map<String, Object> dataMap = new HashMap<String, Object>();
+
+		Page<?> pagex = this.companyserve.selectlistCompany(comp, page, rows);
+
+		dataMap.put("total", pagex.getRows());
+		dataMap.put("rows", pagex.getDataList());
+		return dataMap;
+	}
+
+	@RequestMapping(value = "/selectOneCompanyById", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public Company selectOneCompanyById(HttpServletRequest req,
+			HttpServletResponse resp, int companyno) {
+		// TODO Auto-generated method stub
+		Company company = companyserve.selectOneCompanyById(companyno);
+		return company;
+
+	}
+
+	@RequestMapping(value = "/selectOneCompany", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public void selectOneCompany(HttpServletRequest req,
+			HttpServletResponse resp, int comid) {
+		// TODO Auto-generated method stub
+		
+		Company company = companyserve.selectOneCompany(comid);
+		req.setAttribute("company", company);
+
+		try {
+			req.getRequestDispatcher("/jsp/company/editCompany.jsp").forward(req, resp);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	@RequestMapping(value = "/deleteCompany")
+	public void deleteCompany(HttpServletRequest req, HttpServletResponse resp,
+			int companyno) {
+		// TODO Auto-generated method stub
+		System.out.println("companyno===================="+companyno);
+		companyserve.deleteCompany(companyno);
+	}
+
+	@RequestMapping(value = "/saveCompany", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public Object saveCompany(HttpServletRequest req, HttpServletResponse resp,
+			Company comp) {
+		Map<String, String> map = new HashMap<String, String>();
+		if (comp.getComid() != 0) {
+			try {
+				companyserve.updateCompany(comp);
+				map.put("status", "1");
+				return map;
+			} catch (Exception e) {
+				e.printStackTrace();
+				map.put("status", "0");
+				return map;
+			}
+		} else {
+			try {
+				System.out.println(1);
+				companyserve.saveCompany(comp);
+				map.put("status", "1");
+				System.out.println(1);
+				return map;
+			} catch (Exception e) {
+				e.printStackTrace();
+				map.put("status", "0");
+				return map;
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/mybatis/mapping
+END
+function_mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/mybatis/mapping/function_mapper.xml
+END
+dept-mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/mybatis/mapping/dept-mapper.xml
+END
+goods_mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/mybatis/mapping/goods_mapper.xml
+END
+util-mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/mybatis/mapping/util-mapper.xml
+END
+comp_mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/mybatis/mapping/comp_mapper.xml
+END
+company-mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/mybatis/mapping/company-mapper.xml
+END
+quality_mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/mybatis/mapping/quality_mapper.xml
+END
+order_mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/wdd/!svn/ver/15/LogisticsManageSystem/src/com/logistics/mybatis/mapping/order_mapper.xml
+END
+user_mapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/mybatis/mapping/user_mapper.xml
+END

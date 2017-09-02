@@ -1,0 +1,108 @@
+package com.example.gameContent;
+
+import android.view.MotionEvent;
+
+import com.badlogic.gdx.physics.box2d.World;
+import com.stickycoding.rokon.Scene;
+import com.stickycoding.rokon.Sprite;
+import com.stickycoding.rokon.background.FixedBackground;
+
+public class GameScene extends Scene {
+	private SceneHandler mSceneHandler;
+	private FixedBackground fbackground;// 准备好的背景
+	private Sprite peach, peach2, peach3, gailun, nuoshou, yasuo, huonan;
+	private World mWorld;
+
+	public GameScene() {
+		super(1, 6);
+		this.setBackground(fbackground = new FixedBackground(
+				Textures.background));
+		peach = new Sprite(100, 300, Textures.peach.getWidth(),
+				Textures.peach.getHeight());
+		peach.setTexture(Textures.peach);
+		
+		peach2 = new Sprite(500, 300, Textures.peach.getWidth(),
+				Textures.peach.getHeight());
+		peach2.setTexture(Textures.peach);
+		peach3 = new Sprite(100, 100, Textures.peach.getWidth(),
+				Textures.peach.getHeight());
+		peach3.setTexture(Textures.peach);
+		yasuo = new Sprite(GameActivity.getGameWidth()/2-Textures.yasuo.getWidth()/2,
+				200, Textures.yasuo.getWidth(),
+				Textures.yasuo.getHeight());
+		yasuo.setTexture(Textures.yasuo);
+		huonan = new Sprite(100,
+				200, Textures.huonan.getWidth(),
+				Textures.huonan.getHeight());
+		huonan.setTexture(Textures.huonan);
+		nuoshou = new Sprite(100,
+				200, Textures.nuoshou.getWidth(),
+				Textures.nuoshou.getHeight());
+		nuoshou.setTexture(Textures.nuoshou);
+		
+		
+		// 将精灵添加到0画布上
+		add(0,peach);
+		add(0, peach2);
+		add(0, peach3);
+		add(0,yasuo);
+		add(0,huonan);
+		add(0,nuoshou);
+	}
+
+	@Override
+	public void onPause() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onGameLoop() {// 每一帧都会调用这个方法，在里面更新逻辑
+
+		huonan.accelerate(1, 1);
+		if(huonan.x>GameActivity.getGameWidth()||huonan.y>GameActivity.getGameHeight()){
+			huonan.x=0;
+			huonan.y=0;
+		}
+		peach.x += 10f;
+		if (peach.x > GameActivity.getGameWidth()) {
+			peach.x = 0.0f;
+		}
+		peach2.rotate(2);// 每帧旋转2度
+		peach3.rotate(4);
+	}
+
+	@Override
+	public void onReady() {
+		
+		
+	}
+
+	
+
+	@Override
+	public void onTouchDown(float x, float y, MotionEvent event,
+			int pointerCount, int pointerId) {
+		peach.setRGB(1, 0, 0);
+	}
+
+	@Override
+	public void onTouchMove(float x, float y, MotionEvent event,
+			int pointerCount, int pointerId) {
+		peach2.x = x - (Textures.peach.getWidth() / 2);
+		peach2.y = y - (Textures.peach.getHeight() / 2);
+	}
+
+	@Override
+	public void onTouchUp(float x, float y, MotionEvent event,
+			int pointerCount, int pointerId) {
+		peach.setRGB(0, 1, 0);
+	}
+
+}

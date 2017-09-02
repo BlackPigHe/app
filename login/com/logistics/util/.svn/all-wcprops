@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/util
+END
+DateUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/util/DateUtil.java
+END
+Page.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/util/Page.java
+END
+PageList.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/util/PageList.java
+END
+UserUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/util/UserUtil.java
+END
+OderUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/util/OderUtil.java
+END
+AopUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/util/AopUtil.java
+END

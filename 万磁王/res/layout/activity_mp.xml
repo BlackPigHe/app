@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   <EditText 
+       android:id="@+id/mp_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="http://192.168.186.1:8080/sound.mp3"
+       />
+    <Button 
+        android:id="@+id/mp_play"
+        android:text="播放"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click1"
+        />
+     <Button 
+        android:id="@+id/mp_zanting"
+         android:text="暂停"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click2"
+        />
+      <Button 
+        android:id="@+id/mp_jixu"
+         android:text="继续 "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click3"
+        />
+
+</LinearLayout>

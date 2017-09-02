@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MyOpenHelpe.java&apos; to &apos;万磁王/src/com.example.Magneto&apos;&#x0D;&#x0A;- Original project: &apos;数据库事务&apos;&#x0D;&#x0A;- Destination element: &apos;万磁王/src/com.example.Magneto&apos;&#x0D;&#x0A;- Original element: &apos;com.example.databases2.MyOpenHelpe.java&apos;" description="Copy compilation unit" destination="=万磁王/src&lt;com.example.Magneto" element1="/src&lt;com.example.databases2{MyOpenHelpe.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1474947962873" units="1" version="1.0"/>
+</session>

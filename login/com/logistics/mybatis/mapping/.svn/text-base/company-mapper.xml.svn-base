@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="Company">
+
+       
+       <select id="select2" parameterType="int" resultType="Company">
+             SELECT * FROM company  WHERE companyno=#{companyno};
+       </select>
+       <select id="selectone" parameterType="int" resultType="Company">
+             SELECT * FROM company  WHERE comid=#{comid};
+       </select>
+       <update id="update1" parameterType="Company" >
+       
+            UPDATE company SET  comname=#{comname},bigboss=#{bigboss},
+            tel=#{tel}, addr=#{addr},bigboss=#{bigboss},tel=#{tel},
+            addr=#{addr},commanager=#{commanager},shotname=#{shotname}, date=#{date} WHERE companyno=#{companyno}   ;
+       </update> 
+       
+       <delete id="delete1"  parameterType="int">
+             DELETE FROM company  WHERE companyno=#{companyno}
+       </delete>
+       
+       <insert id="insert1" parameterType="Company" >
+          INSERT  INTO  company (companyno,comname,bigboss,tel,addr,
+          commanager,shotname,date) VALUES(#{companyno},#{comname},
+          #{bigboss},#{tel},#{addr},#{commanager},#{shotname},#{date})
+       
+       </insert>
+      
+     <select id="select-page" parameterType="Page" resultType="Company" >
+          SELECT  * FROM  company  
+          <where>
+          	<if test="params.companyno!=0">companyno=#{params.companyno}</if>
+          </where>
+           order by companyno 
+     
+     </select> 
+       
+          
+          
+  </mapper>
+  

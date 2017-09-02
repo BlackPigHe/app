@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.rpcalc.MainActivity" >
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup 
+        android:id="@+id/rg"
+        android:orientation="horizontal"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RadioButton 
+        android:id="@+id/rb_1"
+        android:checked="true"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="男"
+        />
+     <RadioButton 
+        android:id="@+id/rb_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="女"
+        />
+      <RadioButton 
+        android:id="@+id/rb_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="人妖"
+        />
+    </RadioGroup>
+    <Button 
+        android:onClick="click"
+        android:text="开始测试"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    
+      <TextView 
+          android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#00ff00"
+        android:text="请输入要计算的名字　然后点击计算按钮
+本程序内容纯属构 仅供娱乐之用
+如有雷同　纯属巧合
+----------by 贺"
+          />
+
+</LinearLayout>

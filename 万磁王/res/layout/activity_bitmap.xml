@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.URLlook.MainActivity" >
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入一个网址" 
+        android:text="https://gss0.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/res/r/image/2016-09-16/de13b0c02788180168351339da09aa98.jpg"
+        />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="click"
+        android:text="查看" />
+
+    <ScrollView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <ImageView
+        android:id="@+id/iv"
+        android:text="hehehheheheheheh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+       </ScrollView>
+    
+
+</LinearLayout>

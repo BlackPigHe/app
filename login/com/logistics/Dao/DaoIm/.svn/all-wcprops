@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/DaoIm
+END
+DeptDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/DaoIm/DeptDaoImpl.java
+END
+OrderDaoIm.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wdd/!svn/ver/15/LogisticsManageSystem/src/com/logistics/Dao/DaoIm/OrderDaoIm.java
+END
+FunDaoIm.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/DaoIm/FunDaoIm.java
+END
+QualityDaoIm.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/DaoIm/QualityDaoIm.java
+END
+UserDaoimpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/DaoIm/UserDaoimpl.java
+END
+GoodsImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/DaoIm/GoodsImpl.java
+END
+CompanyDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/DaoIm/CompanyDaoImpl.java
+END
+UtilDaoIm.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/DaoIm/UtilDaoIm.java
+END
+ComDaoimpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wdd/!svn/ver/2/LogisticsManageSystem/src/com/logistics/Dao/DaoIm/ComDaoimpl.java
+END

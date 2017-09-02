@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="Comp">
+  <select id="select_role" parameterType="int" resultType="int">
+  	SELECT roleidfk FROM userrole WHERE useridfk = #{useridfk}
+  </select>
+  
+  <select id="select_all" parameterType="Page" resultType="Complain">
+  <bind name="start" value="(pageNo-1)*pageSize"/>
+  	SELECT * FROM complain WHERE companyno=#{params.companyno}  limit #{start},#{pageSize}
+  </select>
+  
+	<select id="select_count" parameterType="User" resultType="int">
+		select count(*) from complain WHERE companyno=#{companyno}
+	</select>
+  
+  <insert id="insert_comp" parameterType="Complain">
+  	INSERT INTO complain(`comptype`,`compdesc`,`companyno`)  VALUE(#{comptype},#{compdesc},#{companyno})
+  </insert>
+  
+  <select id="select_byid" parameterType="int" resultType="Complain">
+  	select * from complain where complainid=#{complainid}
+  </select>
+  
+  
+  <update id="update_complain" parameterType="Complain">
+  	UPDATE complain SET comptype=#{comptype},compdesc=#{compdesc} WHERE complainid=#{complainid}
+  </update>
+  
+  
+  <delete id="delete_comp">
+  	delete from complain where complainid in
+  	<foreach item="item" index="index" collection="array" open="(" separator="," close=")">
+		        #{item}
+  	</foreach>
+  </delete>
+  
+  
+  
+  
+  </mapper>

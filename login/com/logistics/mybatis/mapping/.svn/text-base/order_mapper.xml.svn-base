@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Order">
+	<insert
+		id="insertOrder"
+		parameterType="Order"
+		useGeneratedKeys="true"
+		keyProperty="orderid"
+	>
+		INSERT INTO `order`
+		(useridfk,`orderno`,`startdept`,`goaldept`,`consigner`,`receivetel`,`receiveaddr`,`consignee`,`hairtel`,`hairaddr`,`goodsidfk`,`packaging`
+		<if test="goodsnum!=0"> ,`goodsnum`
+		</if>
+		<if test="volume!=0"> ,`volume`
+		</if>
+		<if test="weight!=0"> ,`weight`
+		</if>
+		,`freight`
+		<if test="sendmoney!=0"> ,`sendmoney`
+		</if>
+		<if test="carrymoney!=0"> ,`carrymoney`
+		</if>
+		<if test="remark!=null"> ,` remark`
+		</if>
+		,`companyno`,`operdate`,`orderstate`) VALUE
+		(#{useridfk},#{orderno},#{startdept},#{goaldept},#{consigner},#{receivetel},#{receiveaddr},#{consignee},#{hairtel},#{hairaddr},#{goodsidfk},#{packaging}
+		<if test="goodsnum!=0"> ,#{goodsnum}
+		</if>
+		<if test="volume!=0"> ,#{volume}
+		</if>
+		<if test="weight!=0"> ,#{weight}
+		</if>
+		,#{freight}
+		<if test="sendmoney!=0"> ,#{sendmoney}
+		</if>
+		<if test="carrymoney!=0"> ,#{carrymoney}
+		</if>
+		<if test="remark!=null"> ,#{ remark}
+		</if>
+		,#{companyno},#{operdate},#{orderstate})
+	</insert>
+	<select
+		id="getMaxOrderNo"
+		parameterType="int"
+		resultType="int"
+	> SELECT `orderno` FROM `order` WHERE companyno = #{companyno} ORDER BY
+		orderno DESC LIMIT 1
+	</select>
+	<select
+		id="selectOrder-page"
+		parameterType="Page"
+		resultType="Order"
+	>
+		SELECT * FROM `order`
+		<where>
+			startdept=#{params.startdept} and
+			<if test="params.useridfk!=0"> useridfk=#{params.useridfk} and</if>
+			<if test="params.orderno!=0"> orderno=#{params.orderno} and</if>
+			<if test="params.goaldept!=0"> goaldept=#{params.goaldept} and</if>
+			<if test="params.consigner!=null">consigner=#{params.consigner} and</if>
+			<if test="params.receivetel!=null">receivetel=#{params.receivetel} and</if>
+			<if test="params.consignee!=null">consignee=#{params.consignee} and</if>
+			<if test="params.hairtel!=null">hairtel=#{params.hairtel} and</if>
+			<if test="params.goodsidfk!=0"> goodsidfk=#{params.goodsidfk} and</if>
+			companyno=#{params.companyno} and
+			<if test="params.operdate!=null"> operdate like #{params.operdate} and</if>
+			<if test="params.orderstate!=0"> orderstate=#{params.orderstate} and</if>
+			1=1
+		</where>
+		ORDER by orderid desc
+	</select>
+	
+	<select
+		id="selectOrder"
+		parameterType="Order"
+		resultType="Order"
+	>
+		SELECT * FROM `order`
+		<where>
+			startdept=#{startdept} and
+			<if test="useridfk!=0"> useridfk=#{useridfk} and</if>
+			<if test="orderno!=0"> orderno=#{orderno} and</if>
+			<if test="goaldept!=0"> goaldept=#{goaldept} and</if>
+			<if test="consigner!=null">consigner=#{consigner} and</if>
+			<if test="receivetel!=null">receivetel=#{receivetel} and</if>
+			<if test="consignee!=null">consignee=#{consignee} and</if>
+			<if test="hairtel!=null">hairtel=#{hairtel} and</if>
+			<if test="goodsidfk!=0"> goodsidfk=#{goodsidfk} and</if>
+			companyno=#{companyno} and
+			<if test="operdate!=null"> operdate like #{operdate} and</if>
+			<if test="orderstate!=0"> orderstate=#{orderstate} and</if>
+			1=1
+		</where>
+	</select>
+	
+	
+	<delete id="deleteOrder" parameterType="Order">
+		
+		DELETE FROM `order` WHERE 
+			<if test="orderno!=0">`orderno`=#{orderno} AND</if>
+			`companyno`=#{companyno}
+	</delete>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<update
+		id="updateOrder"
+		parameterType="Order"
+	>
+		UPDATE `order`
+		<set>
+			<if test="goaldept!=0"> `goaldept`=#{goaldept},
+			</if>
+			<if test="consigner!=null"> `consigner`=#{consigner},
+			</if>
+			<if test="receivetel!=null"> `receivetel`=#{receivetel},
+			</if>
+			<if test="receiveaddr!=null"> `receiveaddr`=#{receiveaddr},
+			</if>
+			<if test="consignee!=null"> `consignee`=#{consignee},
+			</if>
+			<if test="hairtel!=null"> `hairtel`=#{hairtel},
+			</if>
+			<if test="hairaddr!=null"> `hairaddr`=#{hairaddr},
+			</if>
+			<if test="goodsidfk!=0"> `goodsidfk`=#{goodsidfk},
+			</if>
+			<if test="packaging!=null"> `packaging`=#{packaging},
+			</if>
+			<if test="goodsnum!=0"> `goodsnum`=#{goodsnum},
+			</if>
+			<if test="volume!=0"> `volume`=#{volume},
+			</if>
+			<if test="weight!=0"> `weight`=#{weight},
+			</if>
+			<if test="freight!=0"> `freight`=#{freight},
+			</if>
+			<if test="sendmoney!=0"> `sendmoney`=#{sendmoney}
+			</if>
+			<if test="carrymoney!=0"> `carrymoney`=#{carrymoney},
+			</if>
+			<if test="remark!=null"> `remark`=#{remark},
+			</if>
+			<if test="orderstate!=0"> `orderstate`=#{orderstate}
+			</if>
+			<if test="operdate!=null"> `operdate`=#{operdate},
+			</if>
+			orderno=#{orderno}
+		</set>
+		WHERE `orderno`=#{orderno} and `startdept`=#{startdept} and
+		`companyno`=#{companyno}
+	</update>
+</mapper>
